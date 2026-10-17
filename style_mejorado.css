@@ -1,0 +1,3238 @@
+/* =========================================
+
+   SEPÚLVEDA WEB
+
+   Colores: azul Prusia, celeste y blanco
+
+========================================= */
+
+:root {
+
+    --azul-oscuro: #06183d;
+
+    --azul-prusia: #0b2d59;
+
+    --azul: #0b3d91;
+
+    --azul-medio: #1261c9;
+
+    --azul-claro: #29a9f2;
+
+    --celeste: #e9f5ff;
+
+    --blanco: #ffffff;
+
+    --gris: #64748b;
+
+    --fondo: #f4f8ff;
+
+    --borde: #d8e7f8;
+
+    --sombra: 0 15px 40px rgba(6, 24, 61, 0.12);
+
+    --radio: 20px;
+
+}
+
+/* =========================================
+
+   CONFIGURACIÓN GENERAL
+
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 85px;
+
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--blanco);
+
+    color: var(--azul-oscuro);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+button,
+
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+p {
+
+    margin-bottom: 16px;
+
+    color: var(--gris);
+
+}
+
+h1,
+
+h2,
+
+h3 {
+
+    line-height: 1.2;
+
+    overflow-wrap: break-word;
+
+}
+
+.contenedor {
+
+    width: min(1120px, 90%);
+
+    margin-inline: auto;
+
+}
+
+section {
+
+    scroll-margin-top: 80px;
+
+}
+
+::selection {
+
+    color: var(--blanco);
+
+    background: var(--azul-medio);
+
+}
+
+/* =========================================
+
+   NAVEGACIÓN
+
+========================================= */
+
+.hero {
+
+    position: relative;
+
+    isolation: isolate;
+
+    min-height: 680px;
+
+    min-height: min(760px, 100svh);
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: var(--blanco);
+
+    background:
+
+        linear-gradient(
+
+            110deg,
+
+            rgba(6, 24, 61, 0.97),
+
+            rgba(11, 61, 145, 0.82),
+
+            rgba(6, 24, 61, 0.80)
+
+        ),
+
+        url("imagenes//grupo-estudiantes.jpg") center / cover no-repeat,
+
+        var(--azul-oscuro);
+
+}
+
+.navbar {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 28px;
+
+    padding-block: 25px;
+
+}
+
+.logo-text {
+
+    flex-shrink: 0;
+
+    color: var(--blanco);
+
+    font-size: 1.35rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+.logo-text span {
+
+    color: var(--azul-claro);
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+.nav-links a {
+
+    position: relative;
+
+    padding: 10px 13px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 0.91rem;
+
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    transition:
+
+        background 0.25s ease,
+
+        color 0.25s ease;
+
+}
+
+.nav-links a:hover,
+
+.nav-links a.activo {
+
+    color: var(--blanco);
+
+    background: rgba(41, 169, 242, 0.17);
+
+}
+
+.nav-links a.activo::after {
+
+    position: absolute;
+
+    right: 13px;
+
+    bottom: 4px;
+
+    left: 13px;
+
+    height: 2px;
+
+    background: var(--azul-claro);
+
+    content: "";
+
+}
+
+/* =========================================
+
+   PORTADA PRINCIPAL
+
+========================================= */
+
+.hero-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding-block: 75px 110px;
+
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(41, 169, 242, 0.55);
+
+    border-radius: 30px;
+
+    background: rgba(41, 169, 242, 0.12);
+
+    color: #a9e2ff;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+.hero-content h1 {
+
+    max-width: 850px;
+
+    margin-bottom: 25px;
+
+    font-size: clamp(3.2rem, 8vw, 6.4rem);
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+}
+
+.hero-content h1 span {
+
+    color: var(--azul-claro);
+
+}
+
+.hero-content p {
+
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    line-height: 1.8;
+
+}
+
+.boton {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 14px 22px;
+
+    border: 1px solid var(--azul-claro);
+
+    border-radius: 12px;
+
+    background: var(--azul-claro);
+
+    color: var(--azul-oscuro);
+
+    font-weight: 800;
+
+    box-shadow: 0 8px 24px rgba(41, 169, 242, 0.2);
+
+    transition:
+
+        transform 0.25s ease,
+
+        background 0.25s ease,
+
+        box-shadow 0.25s ease;
+
+}
+
+.boton:hover {
+
+    transform: translateY(-3px);
+
+    background: #7bd2ff;
+
+    box-shadow: 0 12px 30px rgba(41, 169, 242, 0.3);
+
+}
+
+.hero-indicador {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 25px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.hero-indicador span {
+
+    width: 32px;
+
+    height: 2px;
+
+    background: var(--azul-claro);
+
+}
+
+/* =========================================
+
+   TÍTULOS DE SECCIÓN
+
+========================================= */
+
+.seccion-titulo {
+
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+
+}
+
+.mini-titulo {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--azul-medio);
+
+    font-size: 0.77rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2.2px;
+
+}
+
+.seccion-titulo h2,
+
+.intro-texto h2 {
+
+    margin-bottom: 18px;
+
+    color: var(--azul-oscuro);
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+}
+
+.seccion-titulo p {
+
+    max-width: 620px;
+
+    margin-inline: auto;
+
+}
+
+/* =========================================
+
+   INTRODUCCIÓN E IDENTIDAD
+
+========================================= */
+
+.intro {
+
+    padding-block: 100px;
+
+    background:
+
+        radial-gradient(
+
+            circle at 95% 10%,
+
+            rgba(41, 169, 242, 0.09),
+
+            transparent 28%
+
+        ),
+
+        var(--blanco);
+
+}
+
+.intro-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 65px;
+
+}
+
+.intro-texto h2 {
+
+    max-width: 580px;
+
+}
+
+.intro-texto p {
+
+    font-size: 1.02rem;
+
+}
+
+.intro-lateral {
+
+    display: grid;
+
+    gap: 22px;
+
+}
+
+.intro-dato {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 28px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: var(--radio);
+
+    background: var(--fondo);
+
+}
+
+.intro-dato::after {
+
+    position: absolute;
+
+    top: -45px;
+
+    right: -40px;
+
+    width: 140px;
+
+    height: 140px;
+
+    border: 20px solid rgba(41, 169, 242, 0.09);
+
+    border-radius: 50%;
+
+    content: "";
+
+}
+
+.dato-numero {
+
+    display: block;
+
+    color: var(--azul-medio);
+
+    font-size: 3.5rem;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+}
+
+.dato-linea {
+
+    display: block;
+
+    width: 60px;
+
+    height: 4px;
+
+    margin-block: 18px;
+
+    border-radius: 5px;
+
+    background: var(--azul-claro);
+
+}
+
+.intro-dato h3 {
+
+    max-width: 350px;
+
+    margin-bottom: 10px;
+
+    font-size: 1.25rem;
+
+}
+
+.intro-dato p {
+
+    margin-bottom: 0;
+
+}
+
+.intro-imagen {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 220px;
+
+    border-radius: var(--radio);
+
+    background: var(--azul-prusia);
+
+    box-shadow: var(--sombra);
+
+}
+
+.intro-imagen img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+.intro-imagen:hover img {
+
+    transform: scale(1.04);
+
+}
+
+.intro-imagen figcaption {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    padding: 18px;
+
+    background: linear-gradient(transparent, rgba(6, 24, 61, 0.95));
+
+    color: var(--blanco);
+
+    font-weight: 700;
+
+}
+
+/* =========================================
+
+   LÍNEA DE TIEMPO
+
+========================================= */
+
+.historia-timeline {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding-block: 100px;
+
+    background:
+
+        radial-gradient(
+
+            circle at 10% 20%,
+
+            rgba(41, 169, 242, 0.14),
+
+            transparent 30%
+
+        ),
+
+        linear-gradient(145deg, #06183d, #0b2d59 65%, #06183d);
+
+    color: var(--blanco);
+
+}
+
+.historia-timeline .seccion-titulo h2 {
+
+    color: var(--blanco);
+
+}
+
+.historia-timeline .seccion-titulo p {
+
+    color: #c2d9f4;
+
+}
+
+.historia-timeline .mini-titulo {
+
+    color: var(--azul-claro);
+
+}
+
+.timeline {
+
+    position: relative;
+
+    display: grid;
+
+    gap: 38px;
+
+    width: min(900px, 100%);
+
+    margin-inline: auto;
+
+}
+
+.timeline::before {
+
+    position: absolute;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    left: 105px;
+
+    width: 3px;
+
+    border-radius: 5px;
+
+    background: linear-gradient(
+
+        to bottom,
+
+        var(--azul-claro),
+
+        rgba(41, 169, 242, 0.18)
+
+    );
+
+    content: "";
+
+}
+
+.timeline-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    align-items: start;
+
+    column-gap: 52px;
+
+}
+
+.timeline-fecha {
+
+    position: relative;
+
+    z-index: 1;
+
+    padding-top: 22px;
+
+    color: #8edbff;
+
+    font-size: 0.88rem;
+
+    font-weight: 900;
+
+    text-align: right;
+
+}
+
+.timeline-punto {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 24px;
+
+    left: 93px;
+
+    width: 25px;
+
+    height: 25px;
+
+    border: 5px solid var(--azul-oscuro);
+
+    border-radius: 50%;
+
+    background: var(--azul-claro);
+
+    box-shadow: 0 0 0 4px rgba(41, 169, 242, 0.18);
+
+}
+
+.timeline-card {
+
+    overflow: hidden;
+
+    border: 1px solid rgba(173, 218, 255, 0.18);
+
+    border-radius: var(--radio);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+    transition:
+
+        transform 0.3s ease,
+
+        border-color 0.3s ease,
+
+        background 0.3s ease;
+
+}
+
+.timeline-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(41, 169, 242, 0.65);
+
+    background: rgba(255, 255, 255, 0.1);
+
+}
+
+.timeline-card > img {
+
+    width: 100%;
+
+    height: 245px;
+
+    object-fit: cover;
+
+    background: var(--azul-prusia);
+
+}
+
+.timeline-texto {
+
+    padding: 27px;
+
+}
+
+.numero-evento {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--azul-claro);
+
+    font-size: 0.74rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+
+}
+
+.timeline-texto h3 {
+
+    margin-bottom: 18px;
+
+    color: var(--blanco);
+
+    font-size: 1.5rem;
+
+}
+
+.timeline-texto p {
+
+    color: #d4e3f5;
+
+    font-size: 0.96rem;
+
+}
+
+.timeline-texto p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.timeline-texto strong {
+
+    color: #8edbff;
+
+}
+
+/* =========================================
+
+   BIOGRAFÍA DE LA DIRECTORA
+
+========================================= */
+
+.biografia {
+
+    padding-block: 100px;
+
+    background: var(--fondo);
+
+}
+
+.biografia-card {
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    overflow: hidden;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 24px;
+
+    background: var(--blanco);
+
+    box-shadow: var(--sombra);
+
+}
+
+.biografia-foto {
+
+    position: relative;
+
+    min-height: 420px;
+
+    background: var(--azul-prusia);
+
+}
+
+.biografia-foto img {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+}
+
+.biografia-foto > span {
+
+    position: absolute;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    left: 18px;
+
+    padding: 12px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 10px;
+
+    background: rgba(6, 24, 61, 0.85);
+
+    color: var(--blanco);
+
+    font-size: 0.75rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+}
+
+.biografia-texto {
+
+    padding: clamp(25px, 4vw, 48px);
+
+}
+
+.biografia-texto h3 {
+
+    margin-bottom: 22px;
+
+    color: var(--azul-oscuro);
+
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
+
+}
+
+.biografia-texto p {
+
+    font-size: 0.98rem;
+
+}
+
+.biografia-frase {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-left: 4px solid var(--azul-claro);
+
+    border-radius: 0 12px 12px 0;
+
+    background: var(--celeste);
+
+    color: var(--azul-prusia);
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+}
+
+/* =========================================
+
+   TESTIMONIOS
+
+========================================= */
+
+.testimonio {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding-block: 100px;
+
+    background:
+
+        radial-gradient(
+
+            circle at 90% 5%,
+
+            rgba(41, 169, 242, 0.18),
+
+            transparent 28%
+
+        ),
+
+        linear-gradient(145deg, #06183d, #0b2d59);
+
+    color: var(--blanco);
+
+}
+
+.testimonio-encabezado {
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 55px;
+
+    margin-bottom: 60px;
+
+}
+
+.grande-titulo {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--azul-claro);
+
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2.3px;
+
+}
+
+.testimonio-introduccion h2 {
+
+    margin-bottom: 22px;
+
+    color: var(--blanco);
+
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+    font-weight: 900;
+
+    letter-spacing: -1.2px;
+
+}
+
+.testimonio-introduccion p {
+
+    max-width: 560px;
+
+    color: #d0e0f3;
+
+    font-size: 1.02rem;
+
+}
+
+.testimonio-boton {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 8px;
+
+    padding: 13px 19px;
+
+    border: 1px solid var(--azul-claro);
+
+    border-radius: 12px;
+
+    color: var(--blanco);
+
+    font-weight: 800;
+
+    transition:
+
+        background 0.25s ease,
+
+        color 0.25s ease,
+
+        transform 0.25s ease;
+
+}
+
+.testimonio-boton:hover {
+
+    transform: translateY(-3px);
+
+    background: var(--azul-claro);
+
+    color: var(--azul-oscuro);
+
+}
+
+.testimonio-boton span {
+
+    font-size: 1.3rem;
+
+}
+
+.testimonio-imagen-principal {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-width: 0;
+
+    border: 1px solid rgba(173, 218, 255, 0.22);
+
+    border-radius: 24px;
+
+    background: var(--azul-prusia);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+
+}
+
+.testimonio-imagen-principal img {
+
+    width: 100%;
+
+    height: 370px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+.testimonio-imagen-principal:hover img {
+
+    transform: scale(1.04);
+
+}
+
+.testimonio-imagen-principal figcaption {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 20px;
+
+    background: linear-gradient(transparent, rgba(6, 24, 61, 0.95));
+
+    color: var(--blanco);
+
+    font-weight: 800;
+
+}
+
+.figura-icono {
+
+    color: var(--azul-claro);
+
+    font-size: 1.4rem;
+
+}
+
+.testimonio-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+
+    gap: 28px;
+
+    scroll-margin-top: 100px;
+
+}
+
+.testimonio-card {
+
+    min-width: 0;
+
+    padding: clamp(24px, 3vw, 35px);
+
+    border: 1px solid rgba(173, 218, 255, 0.2);
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+
+        145deg,
+
+        rgba(255, 255, 255, 0.1),
+
+        rgba(255, 255, 255, 0.045)
+
+    );
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+
+    transition:
+
+        transform 0.3s ease,
+
+        border-color 0.3s ease,
+
+        background 0.3s ease;
+
+}
+
+.testimonio-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(41, 169, 242, 0.7);
+
+    background: rgba(255, 255, 255, 0.09);
+
+}
+
+.testimonio-icono {
+
+    display: grid;
+
+    width: 48px;
+
+    height: 48px;
+
+    margin-bottom: 20px;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: var(--azul-claro);
+
+    color: var(--azul-oscuro);
+
+    font-size: 1rem;
+
+    font-weight: 900;
+
+}
+
+.testimonio-tipo {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #8edbff;
+
+    font-size: 0.72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+
+}
+
+.testimonio-card h3 {
+
+    margin-bottom: 22px;
+
+    color: var(--blanco);
+
+    font-size: 1.55rem;
+
+}
+
+.testimonio-card p {
+
+    color: #d5e3f4;
+
+    font-size: 0.95rem;
+
+    line-height: 1.85;
+
+}
+
+.testimonio-card p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+/* =========================================
+
+   GALERÍA
+
+========================================= */
+
+.galeria-section {
+
+    padding-block: 100px;
+
+    background: var(--blanco);
+
+}
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-auto-rows: 245px;
+
+    gap: 20px;
+
+}
+
+.foto {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-width: 0;
+
+    border-radius: 18px;
+
+    background: var(--azul-prusia);
+
+    box-shadow: 0 10px 25px rgba(6, 24, 61, 0.12);
+
+}
+
+.foto-grande {
+
+    grid-row: span 2;
+
+}
+
+.foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+.foto:hover img {
+
+    transform: scale(1.06);
+
+}
+
+.foto figcaption {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    padding: 40px 18px 18px;
+
+    background: linear-gradient(
+
+        transparent,
+
+        rgba(6, 24, 61, 0.93)
+
+    );
+
+    color: var(--blanco);
+
+    font-size: 0.95rem;
+
+    font-weight: 800;
+
+}
+
+/* =========================================
+
+   PIE DE PÁGINA
+
+========================================= */
+
+footer {
+
+    background: #04122e;
+
+    color: var(--blanco);
+
+}
+
+.footer-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-block: 40px;
+
+}
+
+.footer-content p {
+
+    margin-top: 10px;
+
+    margin-bottom: 0;
+
+    color: #c2d1e6;
+
+    font-size: 0.9rem;
+
+}
+
+.volver {
+
+    display: inline-flex;
+
+    flex-shrink: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 17px;
+
+    border: 1px solid rgba(41, 169, 242, 0.45);
+
+    border-radius: 10px;
+
+    color: #a9e2ff;
+
+    font-weight: 700;
+
+    transition:
+
+        background 0.25s ease,
+
+        color 0.25s ease;
+
+}
+
+.volver:hover {
+
+    background: var(--azul-claro);
+
+    color: var(--azul-oscuro);
+
+}
+
+.footer-final {
+
+    padding: 18px 5%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    color: #a8bad3;
+
+    font-size: 0.8rem;
+
+    text-align: center;
+
+}
+
+/* =========================================
+
+   ANIMACIONES
+
+========================================= */
+
+.timeline-item,
+
+.biografia-card,
+
+.testimonio-card,
+
+.foto {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* Solo se aplica la animación cuando JavaScript
+
+   confirma que el navegador puede observar elementos. */
+
+.js-animaciones .timeline-item,
+
+.js-animaciones .biografia-card,
+
+.js-animaciones .testimonio-card,
+
+.js-animaciones .foto {
+
+    opacity: 0;
+
+    transform: translateY(22px);
+
+    transition:
+
+        opacity 0.65s ease,
+
+        transform 0.65s ease;
+
+}
+
+.js-animaciones .timeline-item.visible,
+
+.js-animaciones .biografia-card.visible,
+
+.js-animaciones .testimonio-card.visible,
+
+.js-animaciones .foto.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* =========================================
+
+   ACCESIBILIDAD
+
+========================================= */
+
+a:focus-visible {
+
+    outline: 3px solid #7bd2ff;
+
+    outline-offset: 4px;
+
+}
+
+img {
+
+    color: var(--gris);
+
+}
+
+/* =========================================
+
+   TABLETAS
+
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+    .nav-links {
+
+        justify-content: flex-start;
+
+        width: 100%;
+
+    }
+
+    .hero-content {
+
+        padding-top: 60px;
+
+    }
+
+    .intro-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+    .intro-lateral {
+
+        grid-template-columns: 1fr 1fr;
+
+        align-items: stretch;
+
+    }
+
+    .intro-imagen,
+
+    .intro-dato {
+
+        height: 100%;
+
+    }
+
+    .intro-imagen img {
+
+        height: 100%;
+
+        min-height: 250px;
+
+    }
+
+    .timeline {
+
+        width: 100%;
+
+    }
+
+    .timeline-item {
+
+        grid-template-columns: 75px 1fr;
+
+        column-gap: 35px;
+
+    }
+
+    .timeline::before {
+
+        left: 87px;
+
+    }
+
+    .timeline-punto {
+
+        left: 75px;
+
+    }
+
+    .biografia-card {
+
+        grid-template-columns: 0.8fr 1.2fr;
+
+    }
+
+    .biografia-foto {
+
+        min-height: 450px;
+
+    }
+
+    .testimonio-encabezado {
+
+        grid-template-columns: 1fr 0.9fr;
+
+        gap: 30px;
+
+    }
+
+    .testimonio-imagen-principal img {
+
+        height: 310px;
+
+    }
+
+    .galeria {
+
+        grid-auto-rows: 210px;
+
+        gap: 15px;
+
+    }
+
+}
+
+/* =========================================
+
+   CELULARES
+
+========================================= */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+
+        width: min(100% - 32px, 1120px);
+
+    }
+
+    html {
+
+        scroll-padding-top: 15px;
+
+    }
+
+    section {
+
+        scroll-margin-top: 15px;
+
+    }
+
+    .hero {
+
+        min-height: 700px;
+
+    }
+
+    .navbar {
+
+        padding-top: 20px;
+
+        gap: 16px;
+
+    }
+
+    .logo-text {
+
+        font-size: 1.2rem;
+
+    }
+
+    .nav-links {
+
+        display: flex;
+
+        gap: 5px;
+
+    }
+
+    .nav-links a {
+
+        padding: 8px 9px;
+
+        font-size: 0.78rem;
+
+    }
+
+    .nav-links a.activo::after {
+
+        right: 9px;
+
+        left: 9px;
+
+    }
+
+    .hero-content {
+
+        padding-block: 55px 85px;
+
+    }
+
+    .etiqueta {
+
+        font-size: 0.67rem;
+
+        letter-spacing: 1.3px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: clamp(2.8rem, 13vw, 4.2rem);
+
+        letter-spacing: -2px;
+
+    }
+
+    .hero-content p {
+
+        font-size: 0.98rem;
+
+    }
+
+    .hero-indicador {
+
+        font-size: 0.65rem;
+
+        letter-spacing: 1.2px;
+
+    }
+
+    .intro,
+
+    .historia-timeline,
+
+    .biografia,
+
+    .testimonio,
+
+    .galeria-section {
+
+        padding-block: 70px;
+
+    }
+
+    .seccion-titulo {
+
+        margin-bottom: 38px;
+
+    }
+
+    .seccion-titulo h2,
+
+    .intro-texto h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .intro-grid {
+
+        gap: 30px;
+
+    }
+
+    .intro-lateral {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .intro-dato {
+
+        padding: 24px;
+
+    }
+
+    .dato-numero {
+
+        font-size: 3rem;
+
+    }
+
+    .intro-imagen img {
+
+        height: 245px;
+
+    }
+
+    .timeline {
+
+        gap: 30px;
+
+    }
+
+    .timeline::before {
+
+        left: 9px;
+
+    }
+
+    .timeline-item {
+
+        display: block;
+
+        padding-left: 30px;
+
+    }
+
+    .timeline-fecha {
+
+        padding-top: 0;
+
+        margin-bottom: 12px;
+
+        color: #8edbff;
+
+        font-size: 0.82rem;
+
+        text-align: left;
+
+    }
+
+    .timeline-punto {
+
+        top: 2px;
+
+        left: 0;
+
+        width: 20px;
+
+        height: 20px;
+
+        border-width: 4px;
+
+    }
+
+    .timeline-card > img {
+
+        height: 210px;
+
+    }
+
+    .timeline-texto {
+
+        padding: 22px;
+
+    }
+
+    .timeline-texto h3 {
+
+        font-size: 1.3rem;
+
+    }
+
+    .timeline-texto p {
+
+        font-size: 0.92rem;
+
+    }
+
+    .biografia-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .biografia-foto {
+
+        min-height: 340px;
+
+    }
+
+    .biografia-texto {
+
+        padding: 25px;
+
+    }
+
+    .biografia-texto h3 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .testimonio-encabezado {
+
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .testimonio-introduccion h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .testimonio-imagen-principal img {
+
+        height: 260px;
+
+    }
+
+    .testimonio-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        scroll-margin-top: 15px;
+
+    }
+
+    .testimonio-card {
+
+        padding: 24px;
+
+    }
+
+    .testimonio-card h3 {
+
+        font-size: 1.4rem;
+
+    }
+
+    .testimonio-card p {
+
+        font-size: 0.93rem;
+
+    }
+
+    .galeria {
+
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 250px;
+
+        gap: 17px;
+
+    }
+
+    .foto-grande {
+
+        grid-row: auto;
+
+    }
+
+    .footer-content {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding-block: 32px;
+
+    }
+
+    .footer-content p {
+
+        overflow-wrap: anywhere;
+
+    }
+
+}
+
+/* =========================================
+
+   CELULARES MUY PEQUEÑOS
+
+========================================= */
+
+@media (max-width: 380px) {
+
+    .nav-links a {
+
+        padding: 7px;
+
+        font-size: 0.72rem;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 2.6rem;
+
+    }
+
+    .timeline-item {
+
+        padding-left: 25px;
+
+    }
+
+    .timeline-texto {
+
+        padding: 18px;
+
+    }
+
+    .testimonio-card {
+
+        padding: 20px;
+
+    }
+
+}
+
+/* =========================================
+
+   REDUCIR MOVIMIENTO SI EL USUARIO LO PREFIERE
+
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+    *,
+
+    *::before,
+
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+    .js-animaciones .timeline-item,
+
+    .js-animaciones .biografia-card,
+
+    .js-animaciones .testimonio-card,
+
+    .js-animaciones .foto {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+
+/* =========================================
+
+   MEJORAS VISUALES Y DE ACCESIBILIDAD
+
+   Añadidas sin reemplazar los estilos existentes
+
+========================================= */
+
+:focus-visible {
+
+    outline: 3px solid var(--azul-claro);
+
+    outline-offset: 4px;
+
+}
+
+.salto-contenido {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    z-index: 1000;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    color: var(--azul-oscuro);
+
+    background: var(--blanco);
+
+    font-weight: 800;
+
+    transform: translateY(-160%);
+
+    transition: transform 0.2s ease;
+
+}
+
+.salto-contenido:focus {
+
+    transform: translateY(0);
+
+}
+
+.navbar {
+
+    flex-wrap: wrap;
+
+}
+
+.nav-links a:focus-visible,
+
+.boton:focus-visible,
+
+.testimonio-boton:focus-visible,
+
+.volver:focus-visible {
+
+    outline-color: var(--azul-claro);
+
+    outline-offset: 3px;
+
+}
+
+.intro-imagen,
+
+.timeline-card,
+
+.biografia-card,
+
+.testimonio-card,
+
+.foto {
+
+    overflow: hidden;
+
+}
+
+.intro-imagen img,
+
+.timeline-card > img,
+
+.biografia-foto img,
+
+.testimonio-imagen-principal img,
+
+.foto img {
+
+    object-fit: cover;
+
+}
+
+.timeline-card,
+
+.biografia-card,
+
+.testimonio-card,
+
+.foto {
+
+    box-shadow: 0 14px 34px rgba(6, 24, 61, 0.12);
+
+}
+
+.timeline-card:hover,
+
+.biografia-card:hover,
+
+.testimonio-card:hover,
+
+.foto:hover {
+
+    box-shadow: 0 20px 42px rgba(6, 24, 61, 0.2);
+
+}
+
+.biografia-texto p,
+
+.timeline-texto p,
+
+.testimonio-card p {
+
+    text-wrap: pretty;
+
+}
+
+/* Menú desplazable en pantallas pequeñas sin romper el diseño */
+
+@media (max-width: 600px) {
+
+    .nav-links {
+
+        max-width: 100%;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        flex-wrap: nowrap;
+
+        padding: 4px 2px 10px;
+
+        scrollbar-width: thin;
+
+        -webkit-overflow-scrolling: touch;
+
+    }
+
+    .nav-links a {
+
+        flex: 0 0 auto;
+
+        white-space: nowrap;
+
+    }
+
+    .hero-content {
+
+        padding-bottom: 90px;
+
+    }
+
+    .seccion-titulo h2,
+
+    .intro-texto h2,
+
+    .testimonio-introduccion h2 {
+
+        text-wrap: balance;
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .salto-contenido {
+
+        transition: none;
+
+    }
+
+}
+
+/* =====================================================
+
+   NAVEGACIÓN FIJA CORREGIDA
+
+   Permanece visible durante todo el recorrido de la web
+
+===================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 125px;
+
+}
+
+.navbar {
+
+    position: fixed;
+
+    top: 12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 9999;
+
+    width: min(1180px, 94%);
+
+    max-width: 1180px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    border: 1px solid rgba(41, 169, 242, 0.35);
+
+    border-radius: 16px;
+
+    background: rgba(6, 24, 61, 0.97);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 28px rgba(139, 118, 118, 0.25);
+
+}
+
+.navbar .logo-text {
+
+    flex-shrink: 0;
+
+    white-space: nowrap;
+
+}
+
+.navbar .nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    min-width: 0;
+
+}
+
+.navbar .nav-links a {
+
+    flex-shrink: 0;
+
+    white-space: nowrap;
+
+}
+
+/* Compensa el espacio de la barra fija y evita que tape títulos */
+
+section,
+
+#inicio,
+
+#historia,
+
+#directora,
+
+#biografia,
+
+#testimonio,
+
+#galeria {
+
+    scroll-margin-top: 125px;
+
+}
+
+.hero-content {
+
+    padding-top: 155px;
+
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        top: 10px;
+
+        width: 94%;
+
+        padding: 12px 16px;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 7px;
+
+    }
+
+    .navbar .nav-links {
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 4px;
+
+    }
+
+    .navbar .nav-links a {
+
+        padding: 8px 9px;
+
+        font-size: 0.82rem;
+
+    }
+
+    .hero-content {
+
+        padding-top: 175px;
+
+    }
+
+}
+
+/* CELULARES: los botones se pueden deslizar horizontalmente */
+
+@media (max-width: 600px) {
+
+    html {
+
+        scroll-padding-top: 145px;
+
+    }
+
+    .navbar {
+
+        top: 8px;
+
+        width: calc(100% - 16px);
+
+        padding: 9px 10px;
+
+        gap: 5px;
+
+        border-radius: 13px;
+
+    }
+
+    .navbar .logo-text {
+
+        font-size: 1.05rem;
+
+    }
+
+    .navbar .nav-links {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        gap: 4px;
+
+        padding: 3px 2px 7px;
+
+        scrollbar-width: thin;
+
+        -webkit-overflow-scrolling: touch;
+
+    }
+
+    .navbar .nav-links a {
+
+        flex: 0 0 auto;
+
+        padding: 8px 10px;
+
+        font-size: 0.78rem;
+
+    }
+
+    section,
+
+    #inicio,
+
+    #historia,
+
+    #directora,
+
+    #biografia,
+
+    #testimonio,
+
+    #galeria {
+
+        scroll-margin-top: 145px;
+
+    }
+
+    .hero-content {
+
+        padding-top: 175px;
+
+        padding-bottom: 90px;
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+}
+
+/* =========================================
+
+   NAVEGACIÓN FIJA VISIBLE Y DESTACADA
+
+   Pegar al FINAL del archivo CSS
+
+========================================= */
+
+/* Permite que la navegación quede por encima de las secciones */
+
+.hero {
+
+    isolation: auto;
+
+}
+
+.navbar {
+
+    position: fixed !important;
+
+    top: 12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 99999 !important;
+
+    width: min(1200px, 96%);
+
+    padding: 13px 22px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    background: rgba(4, 18, 46, 0.97);
+
+    border: 2px solid #29a9f2;
+
+    border-radius: 18px;
+
+    box-shadow:
+
+        0 0 12px rgba(41, 169, 242, 0.35),
+
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    backdrop-filter: blur(14px);
+
+    transition:
+
+        background 0.3s ease,
+
+        box-shadow 0.3s ease;
+
+}
+
+/* Nombre de la página */
+
+.navbar .logo-text {
+
+    color: #ffffff;
+
+    font-size: 1.25rem;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    text-shadow: 0 0 12px rgba(41, 169, 242, 0.35);
+
+}
+
+.navbar .logo-text span {
+
+    color: #29a9f2;
+
+}
+
+/* Distribución de los botones */
+
+.navbar .nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    min-width: 0;
+
+}
+
+/* Botones de navegación */
+
+.navbar .nav-links a {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 13px;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    color: #e9f5ff;
+
+    font-size: 0.88rem;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+
+        color 0.25s ease,
+
+        background 0.25s ease,
+
+        border-color 0.25s ease,
+
+        transform 0.25s ease,
+
+        box-shadow 0.25s ease;
+
+}
+
+/* Efecto al pasar el cursor */
+
+.navbar .nav-links a:hover {
+
+    color: #06183d;
+
+    background: #29a9f2;
+
+    border-color: #9be1ff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 14px rgba(41, 169, 242, 0.35);
+
+}
+
+/* Resaltar el botón de la sección actual */
+
+.navbar .nav-links a.activo {
+
+    color: #06183d;
+
+    background: #8edbff;
+
+    border-color: #ffffff;
+
+    box-shadow: 0 0 12px rgba(41, 169, 242, 0.3);
+
+}
+
+.navbar .nav-links a.activo::after {
+
+    display: none;
+
+}
+
+/* Evita que la barra tape los títulos al navegar */
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 130px;
+
+}
+
+section,
+
+#inicio,
+
+#historia,
+
+#directora,
+
+#biografia,
+
+#personaje,
+
+#sepulveda,
+
+#testimonio,
+
+#galeria {
+
+    scroll-margin-top: 130px;
+
+}
+
+/* La portada deja espacio para la barra fija */
+
+.hero-content {
+
+    padding-top: 155px;
+
+}
+
+/* TABLETAS */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        top: 10px;
+
+        width: 95%;
+
+        padding: 12px 15px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 8px;
+
+    }
+
+    .navbar .nav-links {
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 5px;
+
+    }
+
+    .navbar .nav-links a {
+
+        padding: 8px 10px;
+
+        font-size: 0.82rem;
+
+    }
+
+    .hero-content {
+
+        padding-top: 175px;
+
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    html {
+
+        scroll-padding-top: 145px;
+
+    }
+
+    .navbar {
+
+        top: 8px;
+
+        width: calc(100% - 16px);
+
+        padding: 9px 10px;
+
+        gap: 5px;
+
+        border-radius: 14px;
+
+    }
+
+    .navbar .logo-text {
+
+        font-size: 1.05rem;
+
+    }
+
+    .navbar .nav-links {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        gap: 5px;
+
+        padding: 4px 2px 8px;
+
+        scrollbar-width: thin;
+
+        -webkit-overflow-scrolling: touch;
+
+    }
+
+    .navbar .nav-links a {
+
+        flex: 0 0 auto;
+
+        padding: 8px 10px;
+
+        font-size: 0.78rem;
+
+    }
+
+    section,
+
+    #inicio,
+
+    #historia,
+
+    #directora,
+
+    #biografia,
+
+    #personaje,
+
+    #sepulveda,
+
+    #testimonio,
+
+    #galeria {
+
+        scroll-margin-top: 145px;
+
+    }
+
+    .hero-content {
+
+        padding-top: 175px;
+
+        padding-bottom: 90px;
+
+    }
+
+}
+
+/* =========================================
+
+   FOTOGRAFÍAS DE LOS 4 TESTIMONIOS
+
+========================================= */
+
+.testimonio-foto {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 230px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(142, 219, 255, 0.35);
+
+    border-radius: 16px;
+
+    background: #0b2d59;
+
+}
+
+.testimonio-foto img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.4s ease;
+
+}
+
+.testimonio-card:hover .testimonio-foto img {
+
+    transform: scale(1.04);
+
+}
+
+.testimonio-foto figcaption {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    padding: 28px 16px 12px;
+
+    color: #ffffff;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    background: linear-gradient(
+
+        transparent,
+
+        rgba(6, 24, 61, 0.95)
+
+    );
+
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 600px) {
+
+    .testimonio-foto {
+
+        height: 210px;
+
+        margin-bottom: 20px;
+
+    }
+
+}
+
+/* Respeta la preferencia de movimiento reducido */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .testimonio-foto img {
+
+        transition: none;
+
+    }
+
+}
+
+/* =====================================================
+   AJUSTES FINALES: INSIGNIA Y ENCABEZADO RESPONSIVO
+   Archivo de insignia esperado: insignia-sepulveda.png
+===================================================== */
+
+.navbar {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px 18px;
+    min-width: 0;
+}
+
+.navbar .logo-text {
+    min-width: 0;
+}
+
+.navbar .nav-links {
+    min-width: 0;
+    flex: initial;
+    justify-content: flex-end;
+}
+
+.insignia-colegio {
+    display: block;
+    width: clamp(44px, 5vw, 64px);
+    height: clamp(44px, 5vw, 64px);
+    object-fit: contain;
+    object-position: center;
+    padding: 4px;
+    border: 1px solid rgba(142, 219, 255, 0.65);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+}
+
+/* Los elementos no deben desbordarse en pantallas medianas. */
+@media (max-width: 1050px) {
+    .navbar {
+        grid-template-columns: minmax(0, 1fr) auto;
+        justify-items: stretch;
+    }
+
+    .navbar .logo-text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .navbar .insignia-colegio {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .navbar .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 5px 10px;
+    }
+
+    .navbar .logo-text {
+        font-size: 1rem;
+    }
+
+    .insignia-colegio {
+        width: 42px;
+        height: 42px;
+        border-radius: 9px;
+    }
+
+    .navbar .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+    }
+}
+
+/* Accesibilidad: se distingue el foco al navegar con teclado. */
+.navbar a:focus-visible,
+.boton:focus-visible,
+.testimonio-boton:focus-visible,
+.volver:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* Evita animaciones innecesarias si el usuario lo prefiere. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
